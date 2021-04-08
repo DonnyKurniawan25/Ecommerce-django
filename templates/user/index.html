@@ -84,9 +84,9 @@
             </div>
 
             <!--====== Section 1 ======-->
-
-
+            
             <!--====== Electronic Category ======-->
+            
             <div class="u-s-p-y-60" id="electronic-01">
 
                 <!--====== Section Intro ======-->
@@ -194,6 +194,9 @@
                             <div class="tab-pane fade show active" id="e-b-s">
                                 <div class="slider-fouc">
                                     <div class="owl-carousel tab-slider" data-item="4">
+                                    {% for object in object_list %}
+
+                            
                                         <div class="u-s-m-b-30">
                                             <div class="product-o product-o--hover-on">
                                                 <div class="product-o__wrap">
@@ -225,16 +228,18 @@
 
                                                 <span class="product-o__name">
 
-                                                    <a href="product-detail-variable.html">Sony WH CH400 - WH-CH400 - CH 400 - CH-400 Wireless Headphones - Red</a></span>
+                                                    <a href="product-detail-variable.html">{{ object.title}}</a></span>
                                                 <div class="product-o__rating gl-rating-style"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
 
                                                     <span class="product-o__review">(2000)</span></div>
 
-                                                <span class="product-o__price">Rp480.000
+                                                <span class="product-o__price">{{ object.discount_price}}
 
-                                                    <span class="product-o__discount">Rp600.000</span></span>
+                                                    <span class="product-o__discount">{{ object.price }}</span></span>
                                             </div>
                                         </div>
+
+                                    {% endfor %}
                                         <div class="u-s-m-b-30">
                                             <div class="product-o product-o--hover-on">
                                                 <div class="product-o__wrap">
